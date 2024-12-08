@@ -112,6 +112,8 @@ const decideOrder = async (req, res, next) => {
           jumlah: {increment: order.jumlah}
         }
       })
+      
+      await sendOrderNotification(canceledOrder);
 
       res.status(200).json({
         message: "Order ditolak",
