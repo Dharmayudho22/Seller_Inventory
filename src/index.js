@@ -29,9 +29,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+//HelloWorld
 app.use(NotFoundMiddleware);
 app.use(ErrorHandlerMiddleware);
 
+//Inisiasi di port
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
   receiveOrderNotifications();
