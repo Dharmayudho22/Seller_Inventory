@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "8471f59d-5de5-4e8a-83e4-d37c35fa00e6",
+		"name": "Penjual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27672583"
+	},
+	"item": [
+		{
+			"name": "Daftar/Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"anfsel13@gmail.com\",\r\n    \"password\" : \"sayacapek\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MDM5NjU1OTkwMzMxNDE5NzQ2MiIsImVtYWlsIjoiYW5mc2VsMTNAZ21haWwuY29tIiwiaWF0IjoxNzMzNDgyOTUwLCJleHAiOjE3MzM0ODY1NTB9.7m0lCqgv8jrRbz2zNdHzCzQyxcNCVgfojNp_gffmE_M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditProfile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MDM5NjU1OTkwMzMxNDE5NzQ2MiIsImVtYWlsIjoiYW5mc2VsMTNAZ21haWwuY29tIiwiaWF0IjoxNzMzNDgyOTUwLCJleHAiOjE3MzM0ODY1NTB9.7m0lCqgv8jrRbz2zNdHzCzQyxcNCVgfojNp_gffmE_M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\" : \"Caren Hortensia\",\r\n    \"fotoProfil\" : \"www.aku.img\",\r\n    \"deskripsi\" : \"Ini adalah toko yang menjual konsol dan video game\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TambahBarang",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MDM5NjU1OTkwMzMxNDE5NzQ2MiIsImVtYWlsIjoiYW5mc2VsMTNAZ21haWwuY29tIiwiaWF0IjoxNzMzNDgyOTUwLCJleHAiOjE3MzM0ODY1NTB9.7m0lCqgv8jrRbz2zNdHzCzQyxcNCVgfojNp_gffmE_M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\" : \"GameBoy Retori\",\r\n    \"deskripsi\" : \"Konsol Portable yang Nostalgia\",\r\n    \"harga\" : 1000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LihatBarangToko",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MDM5NjU1OTkwMzMxNDE5NzQ2MiIsImVtYWlsIjoiYW5mc2VsMTNAZ21haWwuY29tIiwiaWF0IjoxNzMzNDgyOTUwLCJleHAiOjE3MzM0ODY1NTB9.7m0lCqgv8jrRbz2zNdHzCzQyxcNCVgfojNp_gffmE_M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\" : \"GameBoy Retori\",\r\n    \"deskripsi\" : \"Konsol Portable yang Nostalgia\",\r\n    \"harga\" : 1000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TambahStockBarang",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MDM5NjU1OTkwMzMxNDE5NzQ2MiIsImVtYWlsIjoiYW5mc2VsMTNAZ21haWwuY29tIiwiaWF0IjoxNzMzNDgyOTUwLCJleHAiOjE3MzM0ODY1NTB9.7m0lCqgv8jrRbz2zNdHzCzQyxcNCVgfojNp_gffmE_M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\" : \"GameBoy Retori\",\r\n    \"deskripsi\" : \"Konsol Portable yang Nostalgia\",\r\n    \"harga\" : 1000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditBarang",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MDM5NjU1OTkwMzMxNDE5NzQ2MiIsImVtYWlsIjoiYW5mc2VsMTNAZ21haWwuY29tIiwiaWF0IjoxNzMzNDgyOTUwLCJleHAiOjE3MzM0ODY1NTB9.7m0lCqgv8jrRbz2zNdHzCzQyxcNCVgfojNp_gffmE_M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\" : \"GameBoy Retori\",\r\n    \"deskripsi\" : \"Konsol Portable yang Nostalgia\",\r\n    \"harga\" : 1000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HapusBarang",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MDM5NjU1OTkwMzMxNDE5NzQ2MiIsImVtYWlsIjoiYW5mc2VsMTNAZ21haWwuY29tIiwiaWF0IjoxNzMzNDgyOTUwLCJleHAiOjE3MzM0ODY1NTB9.7m0lCqgv8jrRbz2zNdHzCzQyxcNCVgfojNp_gffmE_M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/stock/40656",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"stock",
+						"40656"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CekOrderan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3MDEyMjMxNTE5MzY1NDIwODEyMSIsImVtYWlsIjoiYXhlbHNlYmF5YW5nQGdtYWlsLmNvbSIsImlhdCI6MTczMzQ4NDU1NywiZXhwIjoxNzMzNDg4MTU3fQ.APzqY5TTaSDLsqJJlO0O8sxh12pIKgNpCHRQRPZRaDc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\": \"Axel Sebayang\",\r\n    \"fotoProfil\": \"www.acepu.img\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DecideOrderan",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3MDEyMjMxNTE5MzY1NDIwODEyMSIsImVtYWlsIjoiYXhlbHNlYmF5YW5nQGdtYWlsLmNvbSIsImlhdCI6MTczMzQ4NDU1NywiZXhwIjoxNzMzNDg4MTU3fQ.APzqY5TTaSDLsqJJlO0O8sxh12pIKgNpCHRQRPZRaDc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"Axel Sebayang\",\r\n    \"fotoProfil\": \"www.acepu.img\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
